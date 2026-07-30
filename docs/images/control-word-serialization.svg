@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500" role="img" aria-labelledby="title desc">
+  <title id="title">474位控制字的拼接顺序与串行发送顺序</title>
+  <desc id="desc">MATLAB首先按BYPASS到poly_a7的顺序拼接474位逻辑控制字，然后使用flip整体翻转，实际从poly_a7的第29位开始发送，最后发送BYPASS。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#334155"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 28px Arial, "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .subtitle { font: 600 19px Arial, "Microsoft YaHei", sans-serif; fill: #334155; }
+      .label { font: 600 16px Arial, "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .small { font: 14px Arial, "Microsoft YaHei", sans-serif; fill: #475569; }
+      .inside { font: 600 14px Arial, "Microsoft YaHei", sans-serif; fill: #ffffff; }
+      .box-blue { fill: #2563eb; }
+      .box-violet { fill: #7c3aed; }
+      .box-green { fill: #059669; }
+      .box-orange { fill: #d97706; }
+      .box-slate { fill: #475569; }
+      .outline { fill: none; stroke: #cbd5e1; stroke-width: 1.5; }
+      .arrow { fill: none; stroke: #334155; stroke-width: 2.5; marker-end: url(#arrow); }
+      .guide { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 5 5; }
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="500"/>
+  <text class="title" x="700" y="46" text-anchor="middle">474位控制字：逻辑拼接与实际串行顺序</text>
+
+  <text class="subtitle" x="60" y="96">① MATLAB拼接顺序（flip之前，逻辑索引1 → 474）</text>
+  <g transform="translate(60,120)">
+    <rect class="box-orange" x="0" y="0" width="90" height="66" rx="6"/>
+    <text class="inside" x="45" y="29" text-anchor="middle">BYPASS</text>
+    <text class="inside" x="45" y="50" text-anchor="middle">1位</text>
+
+    <rect class="box-orange" x="94" y="0" width="72" height="66" rx="6"/>
+    <text class="inside" x="130" y="29" text-anchor="middle">CS</text>
+    <text class="inside" x="130" y="50" text-anchor="middle">2位</text>
+
+    <rect class="box-slate" x="170" y="0" width="138" height="66" rx="6"/>
+    <text class="inside" x="239" y="29" text-anchor="middle">EN_* / SU</text>
+    <text class="inside" x="239" y="50" text-anchor="middle">7位</text>
+
+    <rect class="box-green" x="312" y="0" width="214" height="66" rx="6"/>
+    <text class="inside" x="419" y="29" text-anchor="middle">TRIM字段</text>
+    <text class="inside" x="419" y="50" text-anchor="middle">3+3+4位</text>
+
+    <rect class="box-blue" x="530" y="0" width="114" height="66" rx="6"/>
+    <text class="inside" x="587" y="29" text-anchor="middle">ALPHA</text>
+    <text class="inside" x="587" y="50" text-anchor="middle">18位</text>
+
+    <rect class="box-violet" x="648" y="0" width="250" height="66" rx="6"/>
+    <text class="inside" x="773" y="29" text-anchor="middle">Batch_a0…a6</text>
+    <text class="inside" x="773" y="50" text-anchor="middle">7×29 = 203位</text>
+
+    <rect class="box-slate" x="902" y="0" width="88" height="66" rx="6"/>
+    <text class="inside" x="946" y="29" text-anchor="middle">polarity</text>
+    <text class="inside" x="946" y="50" text-anchor="middle">1位</text>
+
+    <rect class="box-blue" x="994" y="0" width="286" height="66" rx="6"/>
+    <text class="inside" x="1137" y="29" text-anchor="middle">poly_a0…a7</text>
+    <text class="inside" x="1137" y="50" text-anchor="middle">8×29 = 232位</text>
+  </g>
+  <text class="small" x="60" y="210">逻辑位1</text>
+  <text class="small" x="1340" y="210" text-anchor="end">逻辑位474</text>
+
+  <path class="arrow" d="M700 226 L700 276"/>
+  <text class="label" x="720" y="258">Din_data = flip(Din_data)</text>
+
+  <text class="subtitle" x="60" y="316">② FPGA引脚实际发送顺序（串行位d1 → d474）</text>
+  <g transform="translate(60,340)">
+    <rect class="box-blue" x="0" y="0" width="310" height="72" rx="6"/>
+    <text class="inside" x="155" y="28" text-anchor="middle">poly_a7(29→1)…poly_a0(29→1)</text>
+    <text class="inside" x="155" y="52" text-anchor="middle">d1…d232</text>
+
+    <rect class="box-slate" x="314" y="0" width="90" height="72" rx="6"/>
+    <text class="inside" x="359" y="28" text-anchor="middle">polarity</text>
+    <text class="inside" x="359" y="52" text-anchor="middle">d233</text>
+
+    <rect class="box-violet" x="408" y="0" width="310" height="72" rx="6"/>
+    <text class="inside" x="563" y="28" text-anchor="middle">Batch_a6(29→1)…a0(29→1)</text>
+    <text class="inside" x="563" y="52" text-anchor="middle">d234…d436</text>
+
+    <rect class="box-blue" x="722" y="0" width="128" height="72" rx="6"/>
+    <text class="inside" x="786" y="28" text-anchor="middle">ALPHA(18→1)</text>
+    <text class="inside" x="786" y="52" text-anchor="middle">d437…d454</text>
+
+    <rect class="box-green" x="854" y="0" width="162" height="72" rx="6"/>
+    <text class="inside" x="935" y="28" text-anchor="middle">TRIM反序</text>
+    <text class="inside" x="935" y="52" text-anchor="middle">d455…d464</text>
+
+    <rect class="box-slate" x="1020" y="0" width="144" height="72" rx="6"/>
+    <text class="inside" x="1092" y="28" text-anchor="middle">SU / EN_*反序</text>
+    <text class="inside" x="1092" y="52" text-anchor="middle">d465…d471</text>
+
+    <rect class="box-orange" x="1168" y="0" width="112" height="72" rx="6"/>
+    <text class="inside" x="1224" y="23" text-anchor="middle">CS(2), CS(1)</text>
+    <text class="inside" x="1224" y="44" text-anchor="middle">d472,d473</text>
+    <text class="inside" x="1224" y="64" text-anchor="middle">BYPASS=d474</text>
+  </g>
+
+  <line class="guide" x1="60" y1="424" x2="60" y2="464"/>
+  <line class="guide" x1="1340" y1="424" x2="1340" y2="464"/>
+  <text class="label" x="60" y="485">第1个上升沿：poly_a7(29)</text>
+  <text class="label" x="1340" y="485" text-anchor="end">第474个上升沿：BYPASS</text>
+</svg>

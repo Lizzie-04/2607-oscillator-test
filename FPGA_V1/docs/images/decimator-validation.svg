@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title{font:700 28px "Microsoft YaHei",sans-serif;fill:#0f172a}
+      .sub{font:15px "Microsoft YaHei",sans-serif;fill:#475569}
+      .label{font:600 16px "Microsoft YaHei",sans-serif;fill:#0f172a}
+      .small{font:14px "Microsoft YaHei",sans-serif;fill:#334155}
+      .axis{stroke:#94a3b8;stroke-width:1.5}
+      .tri{stroke:#2563eb;stroke-width:4;fill:#dbeafe}
+      .valid{stroke:#16a34a;stroke-width:3;fill:none}
+      .boundary{stroke:#ea580c;stroke-width:2;stroke-dasharray:7 5}
+      .box{fill:#f8fafc;stroke:#64748b;stroke-width:1.5;rx:10}
+      .pass{fill:#f0fdf4;stroke:#22c55e;stroke-width:1.5;rx:10}
+      .edge{stroke:#334155;stroke-width:2;fill:none;marker-end:url(#arrow2)}
+    </style>
+  </defs>
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <text class="title" x="45" y="45">FS_DATA_OUT33 连续三角窗降采样</text>
+  <text class="sub" x="45" y="73">每个输出窗口使用 L_FILTER=2N_FILTER 个 FS 上升沿；权重和严格等于 N_FILTER²。</text>
+
+  <line class="axis" x1="100" y1="335" x2="750" y2="335"/>
+  <line class="axis" x1="100" y1="335" x2="100" y2="125"/>
+  <path class="tri" d="M100 335L390 135L680 335Z"/>
+  <g class="small" text-anchor="middle">
+    <text x="100" y="360">0</text>
+    <text x="390" y="360">N_FILTER</text>
+    <text x="680" y="360">L_FILTER</text>
+    <text x="390" y="117">最大权重 N_FILTER</text>
+  </g>
+  <text class="label" x="24" y="200" transform="rotate(-90 24 200)">权重</text>
+  <text class="small" x="215" y="245">0…N_FILTER−1</text>
+  <text class="small" x="530" y="245">N_FILTER…1</text>
+
+  <text class="label" x="45" y="420">valid / sample_sequence</text>
+  <path class="valid" d="M100 470H280V430H300V470H490V430H510V470H700V430H720V470H760"/>
+  <g class="small" text-anchor="middle">
+    <text x="290" y="415">seq k</text>
+    <text x="500" y="415">seq k+1</text>
+    <text x="710" y="415">seq k+2</text>
+  </g>
+  <line class="boundary" x1="500" y1="105" x2="500" y2="500"/>
+  <text class="small" x="515" y="135">UI 请求 L_FILTER=80</text>
+  <text class="small" x="515" y="158">内部 N_FILTER=40；仅在边界生效</text>
+  <text class="small" x="515" y="525">连续输出，无清空间隙</text>
+
+  <rect class="box" x="820" y="125" width="330" height="145"/>
+  <text class="label" x="985" y="160" text-anchor="middle">定点归一化</text>
+  <text class="small" x="845" y="195">μ = (Σ bit[k] · weight[k] &lt;&lt; 16) / N_FILTER²</text>
+  <text class="small" x="845" y="225">输出格式：18-bit unsigned Q16</text>
+  <text class="small" x="845" y="250">μ1 与 μ2 每个窗口同时更新</text>
+
+  <rect class="pass" x="820" y="315" width="330" height="205"/>
+  <text class="label" x="985" y="350" text-anchor="middle">仿真断言结果</text>
+  <text class="small" x="845" y="385">输入：BS_T=1，BS_C=0</text>
+  <text class="small" x="845" y="415">输出：μ1=65536 = 1.000000</text>
+  <text class="small" x="845" y="445">输出：μ2=0 = 0.000000</text>
+  <text class="small" x="845" y="475">N_FILTER：32 → 40，边界切换正确</text>
+  <text class="small" x="845" y="505">连续 valid 周期：L_FILTER；PASS</text>
+  <path class="edge" d="M750 335H805"/>
+</svg>

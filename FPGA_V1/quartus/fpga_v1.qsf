@@ -1,0 +1,177 @@
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY fpga_v1_top
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name IGNORE_PARTITIONS ON
+
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/fpga_v1_protocol_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/chip_control_driver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/control_word_unpack.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/clock_generator_2mhz.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/reset_synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pulse_toggle_cdc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/sample_mailbox_cdc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/triangular_decimator_runtime.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/jtag_request_receiver.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/gpio_host_bridge.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/host_command_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/fpga_v1_core.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/fpga_v1_top.sv
+
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/filter_down.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/divider.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/poly_engine_system.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/poly_engine_freq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/sar_calibrator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/filter_up.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/digital_DSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/on_chip/DigOsc.sv
+
+set_global_assignment -name SDC_FILE fpga_v1.sdc
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
+set_location_assignment PIN_AF14 -to CLOCK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY[0]
+set_location_assignment PIN_AA14 -to KEY[0]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDR[9]
+set_location_assignment PIN_V16 -to LEDR[0]
+set_location_assignment PIN_W16 -to LEDR[1]
+set_location_assignment PIN_V17 -to LEDR[2]
+set_location_assignment PIN_V18 -to LEDR[3]
+set_location_assignment PIN_W17 -to LEDR[4]
+set_location_assignment PIN_W19 -to LEDR[5]
+set_location_assignment PIN_Y19 -to LEDR[6]
+set_location_assignment PIN_W20 -to LEDR[7]
+set_location_assignment PIN_W21 -to LEDR[8]
+set_location_assignment PIN_Y21 -to LEDR[9]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DATA[15]
+set_location_assignment PIN_AC18 -to PC_DATA[0]
+set_location_assignment PIN_Y17  -to PC_DATA[1]
+set_location_assignment PIN_AD17 -to PC_DATA[2]
+set_location_assignment PIN_Y18  -to PC_DATA[3]
+set_location_assignment PIN_AK16 -to PC_DATA[4]
+set_location_assignment PIN_AK18 -to PC_DATA[5]
+set_location_assignment PIN_AK19 -to PC_DATA[6]
+set_location_assignment PIN_AJ19 -to PC_DATA[7]
+set_location_assignment PIN_AJ17 -to PC_DATA[8]
+set_location_assignment PIN_AJ16 -to PC_DATA[9]
+set_location_assignment PIN_AH18 -to PC_DATA[10]
+set_location_assignment PIN_AH17 -to PC_DATA[11]
+set_location_assignment PIN_AG16 -to PC_DATA[12]
+set_location_assignment PIN_AE16 -to PC_DATA[13]
+set_location_assignment PIN_AF16 -to PC_DATA[14]
+set_location_assignment PIN_AG17 -to PC_DATA[15]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_INDEX[5]
+set_location_assignment PIN_AA18 -to PC_INDEX[0]
+set_location_assignment PIN_AA19 -to PC_INDEX[1]
+set_location_assignment PIN_AE17 -to PC_INDEX[2]
+set_location_assignment PIN_AC20 -to PC_INDEX[3]
+set_location_assignment PIN_AH19 -to PC_INDEX[4]
+set_location_assignment PIN_AJ20 -to PC_INDEX[5]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_OPCODE[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_OPCODE[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_OPCODE[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_OPCODE[3]
+set_location_assignment PIN_AH20 -to PC_OPCODE[0]
+set_location_assignment PIN_AK21 -to PC_OPCODE[1]
+set_location_assignment PIN_AD19 -to PC_OPCODE[2]
+set_location_assignment PIN_AD20 -to PC_OPCODE[3]
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_REQUEST_TOGGLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_WRITE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_ACK_TOGGLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_PENDING
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_ERROR
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_SAMPLE_TOGGLE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_DRIVER_BUSY
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_SAR_BUSY
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_SAR_DONE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to PC_CONTROL_COMPLETE
+set_location_assignment PIN_AE18 -to PC_REQUEST_TOGGLE
+set_location_assignment PIN_AE19 -to PC_WRITE
+set_location_assignment PIN_AF20 -to PC_ACK_TOGGLE
+set_location_assignment PIN_AF21 -to PC_PENDING
+set_location_assignment PIN_AF19 -to PC_ERROR
+set_location_assignment PIN_AG21 -to PC_SAMPLE_TOGGLE
+set_location_assignment PIN_AF18 -to PC_DRIVER_BUSY
+set_location_assignment PIN_AG20 -to PC_SAR_BUSY
+set_location_assignment PIN_AG18 -to PC_SAR_DONE
+set_location_assignment PIN_AJ21 -to PC_CONTROL_COMPLETE
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Address1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Address2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to Address3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_IN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_EN1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_EN2
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_EN3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_EN4
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SR_EN5
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to START_DLL
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to START_ANA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to FS_DATA_OUT33
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to RESET
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK_3P3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BS_T_OUT33
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DSM_3P3
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to BS_C_OUT33
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to OSC_OUT33_TO_FPGA
+
+set_location_assignment PIN_AB17 -to Address1
+set_location_assignment PIN_AA21 -to Address2
+set_location_assignment PIN_AC23 -to Address3
+set_location_assignment PIN_AE23 -to SR_CLK
+set_location_assignment PIN_AF25 -to SR_IN
+set_location_assignment PIN_AG25 -to SR_EN1
+set_location_assignment PIN_AH24 -to SR_EN2
+set_location_assignment PIN_AJ27 -to SR_EN3
+set_location_assignment PIN_AK28 -to SR_EN4
+set_location_assignment PIN_AJ26 -to SR_EN5
+set_location_assignment PIN_AH25 -to START_DLL
+set_location_assignment PIN_AJ24 -to START_ANA
+set_location_assignment PIN_AG23 -to FS_DATA_OUT33
+set_location_assignment PIN_AH23 -to RESET
+set_location_assignment PIN_AH22 -to CLK_3P3
+set_location_assignment PIN_AG22 -to BS_T_OUT33
+set_location_assignment PIN_AF24 -to DSM_3P3
+set_location_assignment PIN_AF23 -to BS_C_OUT33
+set_location_assignment PIN_AE22 -to OSC_OUT33_TO_FPGA

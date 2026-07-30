@@ -1,0 +1,13 @@
+artifacts/
+quartus/db/
+quartus/incremental_db/
+quartus/output_files/
+quartus/*.rpt
+quartus/*.summary
+quartus/*.smsg
+quartus/*.done
+quartus/*.jdi
+quartus/*.sld
+quartus/*.qws
+sim/work/
+__pycache__/

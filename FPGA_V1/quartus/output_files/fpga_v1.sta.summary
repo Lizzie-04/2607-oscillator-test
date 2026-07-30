@@ -1,0 +1,261 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : 11.561
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 11.930
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'DSM_CLK_INT'
+Slack : 488.589
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'FS_DATA_OUT33'
+Slack : 1781.082
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'FS_DATA_OUT33'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.260
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'DSM_CLK_INT'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 29.973
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'FS_DATA_OUT33'
+Slack : 1994.790
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'FS_DATA_OUT33'
+Slack : 0.561
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.984
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.842
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.806
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'DSM_CLK_INT'
+Slack : 249.339
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FS_DATA_OUT33'
+Slack : 998.983
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : 11.818
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.008
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'DSM_CLK_INT'
+Slack : 488.642
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'FS_DATA_OUT33'
+Slack : 1778.058
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'FS_DATA_OUT33'
+Slack : 0.173
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.209
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'DSM_CLK_INT'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.047
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'FS_DATA_OUT33'
+Slack : 1995.028
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'FS_DATA_OUT33'
+Slack : 0.513
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.927
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.806
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.817
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'DSM_CLK_INT'
+Slack : 249.344
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FS_DATA_OUT33'
+Slack : 999.007
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 14.023
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : 14.444
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'DSM_CLK_INT'
+Slack : 492.795
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'FS_DATA_OUT33'
+Slack : 1872.441
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'DSM_CLK_INT'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.129
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'FS_DATA_OUT33'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 31.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'FS_DATA_OUT33'
+Slack : 1996.486
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'FS_DATA_OUT33'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.761
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.773
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'DSM_CLK_INT'
+Slack : 249.568
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FS_DATA_OUT33'
+Slack : 998.876
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : 15.041
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'DSM_CLK_INT'
+Slack : 493.424
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'FS_DATA_OUT33'
+Slack : 1881.121
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'DSM_CLK_INT'
+Slack : 0.081
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.113
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.118
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'FS_DATA_OUT33'
+Slack : 0.119
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 31.383
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'FS_DATA_OUT33'
+Slack : 1996.908
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'FS_DATA_OUT33'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.721
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.797
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'DSM_CLK_INT'
+Slack : 249.584
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FS_DATA_OUT33'
+Slack : 998.846
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,141 @@
+<session sof_file="">
+  <display_tree>
+    <display_branch instance="led_capture" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info/>
+  <instance name="led_capture">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="2" version="6"/>
+    <position_info/>
+    <signal_set global_temp="1" name="led_signal_set">
+      <clock name="CLOCK_50" polarity="posedge" tap_mode="classic"/>
+      <config ram_type="AUTO" reserved_data_nodes="45" reserved_trigger_nodes="1" sample_depth="512" trigger_in_enable="no" trigger_in_node="" trigger_in_tap_mode="classic" trigger_out_enable="no" trigger_out_node=""/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire alias="jtag_command_receiver:receiver|update_pulse" name="acq_trigger_in[0]" tap_mode="classic"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire alias="update_pulse" name="acq_data_in[0]" tap_mode="classic"/>
+          <wire alias="LEDR[0]" name="acq_data_in[1]" tap_mode="classic"/>
+          <wire alias="LEDR[1]" name="acq_data_in[2]" tap_mode="classic"/>
+          <wire alias="LEDR[2]" name="acq_data_in[3]" tap_mode="classic"/>
+          <wire alias="LEDR[3]" name="acq_data_in[4]" tap_mode="classic"/>
+          <wire alias="LEDR[4]" name="acq_data_in[5]" tap_mode="classic"/>
+          <wire alias="LEDR[5]" name="acq_data_in[6]" tap_mode="classic"/>
+          <wire alias="LEDR[6]" name="acq_data_in[7]" tap_mode="classic"/>
+          <wire alias="LEDR[7]" name="acq_data_in[8]" tap_mode="classic"/>
+          <wire alias="LEDR[8]" name="acq_data_in[9]" tap_mode="classic"/>
+          <wire alias="LEDR[9]" name="acq_data_in[10]" tap_mode="classic"/>
+          <wire alias="latched_value[0]" name="acq_data_in[11]" tap_mode="classic"/>
+          <wire alias="latched_value[1]" name="acq_data_in[12]" tap_mode="classic"/>
+          <wire alias="latched_value[2]" name="acq_data_in[13]" tap_mode="classic"/>
+          <wire alias="latched_value[3]" name="acq_data_in[14]" tap_mode="classic"/>
+          <wire alias="latched_value[4]" name="acq_data_in[15]" tap_mode="classic"/>
+          <wire alias="latched_value[5]" name="acq_data_in[16]" tap_mode="classic"/>
+          <wire alias="latched_value[6]" name="acq_data_in[17]" tap_mode="classic"/>
+          <wire alias="latched_value[7]" name="acq_data_in[18]" tap_mode="classic"/>
+          <wire alias="latched_value[8]" name="acq_data_in[19]" tap_mode="classic"/>
+          <wire alias="latched_value[9]" name="acq_data_in[20]" tap_mode="classic"/>
+          <wire alias="ack_toggle" name="acq_data_in[21]" tap_mode="classic"/>
+          <wire alias="busy" name="acq_data_in[22]" tap_mode="classic"/>
+          <wire alias="pending_value[0]" name="acq_data_in[23]" tap_mode="classic"/>
+          <wire alias="pending_value[1]" name="acq_data_in[24]" tap_mode="classic"/>
+          <wire alias="pending_value[2]" name="acq_data_in[25]" tap_mode="classic"/>
+          <wire alias="pending_value[3]" name="acq_data_in[26]" tap_mode="classic"/>
+          <wire alias="pending_value[4]" name="acq_data_in[27]" tap_mode="classic"/>
+          <wire alias="pending_value[5]" name="acq_data_in[28]" tap_mode="classic"/>
+          <wire alias="pending_value[6]" name="acq_data_in[29]" tap_mode="classic"/>
+          <wire alias="pending_value[7]" name="acq_data_in[30]" tap_mode="classic"/>
+          <wire alias="pending_value[8]" name="acq_data_in[31]" tap_mode="classic"/>
+          <wire alias="pending_value[9]" name="acq_data_in[32]" tap_mode="classic"/>
+          <wire alias="request_value[0]" name="acq_data_in[33]" tap_mode="classic"/>
+          <wire alias="request_value[1]" name="acq_data_in[34]" tap_mode="classic"/>
+          <wire alias="request_value[2]" name="acq_data_in[35]" tap_mode="classic"/>
+          <wire alias="request_value[3]" name="acq_data_in[36]" tap_mode="classic"/>
+          <wire alias="request_value[4]" name="acq_data_in[37]" tap_mode="classic"/>
+          <wire alias="request_value[5]" name="acq_data_in[38]" tap_mode="classic"/>
+          <wire alias="request_value[6]" name="acq_data_in[39]" tap_mode="classic"/>
+          <wire alias="request_value[7]" name="acq_data_in[40]" tap_mode="classic"/>
+          <wire alias="request_value[8]" name="acq_data_in[41]" tap_mode="classic"/>
+          <wire alias="request_value[9]" name="acq_data_in[42]" tap_mode="classic"/>
+          <wire alias="deferred" name="acq_data_in[43]" tap_mode="classic"/>
+          <wire alias="request_toggle" name="acq_data_in[44]" tap_mode="classic"/>
+        </data_input_vec>
+        <storage_qualifier_input_vec/>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <bus name="request_word" order="msb_to_lsb" radix="hex">
+            <net data_index="44" is_data_input="true" is_node_valid="true" name="acq_data_in[44]" tap_mode="classic"/>
+            <net data_index="43" is_data_input="true" is_node_valid="true" name="acq_data_in[43]" tap_mode="classic"/>
+            <net data_index="42" is_data_input="true" is_node_valid="true" name="acq_data_in[42]" tap_mode="classic"/>
+            <net data_index="41" is_data_input="true" is_node_valid="true" name="acq_data_in[41]" tap_mode="classic"/>
+            <net data_index="40" is_data_input="true" is_node_valid="true" name="acq_data_in[40]" tap_mode="classic"/>
+            <net data_index="39" is_data_input="true" is_node_valid="true" name="acq_data_in[39]" tap_mode="classic"/>
+            <net data_index="38" is_data_input="true" is_node_valid="true" name="acq_data_in[38]" tap_mode="classic"/>
+            <net data_index="37" is_data_input="true" is_node_valid="true" name="acq_data_in[37]" tap_mode="classic"/>
+            <net data_index="36" is_data_input="true" is_node_valid="true" name="acq_data_in[36]" tap_mode="classic"/>
+            <net data_index="35" is_data_input="true" is_node_valid="true" name="acq_data_in[35]" tap_mode="classic"/>
+            <net data_index="34" is_data_input="true" is_node_valid="true" name="acq_data_in[34]" tap_mode="classic"/>
+            <net data_index="33" is_data_input="true" is_node_valid="true" name="acq_data_in[33]" tap_mode="classic"/>
+          </bus>
+          <bus name="pending_value" order="msb_to_lsb" radix="unsigned">
+            <net data_index="32" is_data_input="true" is_node_valid="true" name="acq_data_in[32]" tap_mode="classic"/>
+            <net data_index="31" is_data_input="true" is_node_valid="true" name="acq_data_in[31]" tap_mode="classic"/>
+            <net data_index="30" is_data_input="true" is_node_valid="true" name="acq_data_in[30]" tap_mode="classic"/>
+            <net data_index="29" is_data_input="true" is_node_valid="true" name="acq_data_in[29]" tap_mode="classic"/>
+            <net data_index="28" is_data_input="true" is_node_valid="true" name="acq_data_in[28]" tap_mode="classic"/>
+            <net data_index="27" is_data_input="true" is_node_valid="true" name="acq_data_in[27]" tap_mode="classic"/>
+            <net data_index="26" is_data_input="true" is_node_valid="true" name="acq_data_in[26]" tap_mode="classic"/>
+            <net data_index="25" is_data_input="true" is_node_valid="true" name="acq_data_in[25]" tap_mode="classic"/>
+            <net data_index="24" is_data_input="true" is_node_valid="true" name="acq_data_in[24]" tap_mode="classic"/>
+            <net data_index="23" is_data_input="true" is_node_valid="true" name="acq_data_in[23]" tap_mode="classic"/>
+          </bus>
+          <net data_index="22" is_data_input="true" is_node_valid="true" name="busy" tap_mode="classic"/>
+          <net data_index="21" is_data_input="true" is_node_valid="true" name="ack_toggle" tap_mode="classic"/>
+          <bus name="latched_value" order="msb_to_lsb" radix="unsigned">
+            <net data_index="20" is_data_input="true" is_node_valid="true" name="acq_data_in[20]" tap_mode="classic"/>
+            <net data_index="19" is_data_input="true" is_node_valid="true" name="acq_data_in[19]" tap_mode="classic"/>
+            <net data_index="18" is_data_input="true" is_node_valid="true" name="acq_data_in[18]" tap_mode="classic"/>
+            <net data_index="17" is_data_input="true" is_node_valid="true" name="acq_data_in[17]" tap_mode="classic"/>
+            <net data_index="16" is_data_input="true" is_node_valid="true" name="acq_data_in[16]" tap_mode="classic"/>
+            <net data_index="15" is_data_input="true" is_node_valid="true" name="acq_data_in[15]" tap_mode="classic"/>
+            <net data_index="14" is_data_input="true" is_node_valid="true" name="acq_data_in[14]" tap_mode="classic"/>
+            <net data_index="13" is_data_input="true" is_node_valid="true" name="acq_data_in[13]" tap_mode="classic"/>
+            <net data_index="12" is_data_input="true" is_node_valid="true" name="acq_data_in[12]" tap_mode="classic"/>
+            <net data_index="11" is_data_input="true" is_node_valid="true" name="acq_data_in[11]" tap_mode="classic"/>
+          </bus>
+          <bus name="LEDR" order="msb_to_lsb" radix="binary">
+            <net data_index="10" is_data_input="true" is_node_valid="true" name="acq_data_in[10]" tap_mode="classic"/>
+            <net data_index="9" is_data_input="true" is_node_valid="true" name="acq_data_in[9]" tap_mode="classic"/>
+            <net data_index="8" is_data_input="true" is_node_valid="true" name="acq_data_in[8]" tap_mode="classic"/>
+            <net data_index="7" is_data_input="true" is_node_valid="true" name="acq_data_in[7]" tap_mode="classic"/>
+            <net data_index="6" is_data_input="true" is_node_valid="true" name="acq_data_in[6]" tap_mode="classic"/>
+            <net data_index="5" is_data_input="true" is_node_valid="true" name="acq_data_in[5]" tap_mode="classic"/>
+            <net data_index="4" is_data_input="true" is_node_valid="true" name="acq_data_in[4]" tap_mode="classic"/>
+            <net data_index="3" is_data_input="true" is_node_valid="true" name="acq_data_in[3]" tap_mode="classic"/>
+            <net data_index="2" is_data_input="true" is_node_valid="true" name="acq_data_in[2]" tap_mode="classic"/>
+            <net data_index="1" is_data_input="true" is_node_valid="true" name="acq_data_in[1]" tap_mode="classic"/>
+          </bus>
+          <net data_index="0" is_data_input="true" is_node_valid="true" name="update_pulse" tap_mode="classic"/>
+        </data_view>
+        <setup_view/>
+      </presentation>
+      <trigger CRC="30394DBB" global_temp="1" name="update_trigger" position="center" record_data_gap="true" storage_mode="off">
+        <power_up_trigger position="center"/>
+        <events use_custom_flow_control="no">
+          <level enabled="yes" name="update_rising" type="basic">'acq_trigger_in[0]' == rising edge
+            <power_up enabled="yes">
+            </power_up>
+            <op_node/>
+          </level>
+        </events>
+        <storage_qualifier_events>
+          <transitional>
+            <pwr_up_transitional/>
+          </transitional>
+        </storage_qualifier_events>
+      </trigger>
+    </signal_set>
+  </instance>
+</session>

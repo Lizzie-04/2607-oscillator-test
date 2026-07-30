@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="560" viewBox="0 0 1300 560" role="img" aria-labelledby="title desc">
+  <title id="title">单个串行数据位的0.5毫秒建立和保持时序</title>
+  <desc id="desc">每个数据位占两个0.5毫秒样点。数据在低时钟期间建立0.5毫秒，在随后上升沿被芯片采样，并在高电平期间继续保持0.5毫秒。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrow-start" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M10,0 L0,4 L10,8 Z" fill="#475569"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 28px Arial, "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .label { font: 600 18px Arial, "Microsoft YaHei", sans-serif; fill: #0f172a; }
+      .small { font: 15px Arial, "Microsoft YaHei", sans-serif; fill: #475569; }
+      .axis { stroke: #94a3b8; stroke-width: 1.5; }
+      .grid { stroke: #cbd5e1; stroke-width: 1.2; stroke-dasharray: 5 5; }
+      .clk { stroke: #2563eb; stroke-width: 4; fill: none; stroke-linejoin: round; }
+      .data { fill: #ede9fe; stroke: #7c3aed; stroke-width: 2.5; }
+      .measure { stroke: #475569; stroke-width: 1.8; marker-start: url(#arrow-start); marker-end: url(#arrow); }
+      .edge { stroke: #dc2626; stroke-width: 2.5; stroke-dasharray: 7 5; }
+      .edge-text { font: 600 16px Arial, "Microsoft YaHei", sans-serif; fill: #dc2626; }
+      .note { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <rect class="bg" width="1300" height="560"/>
+  <text class="title" x="650" y="48" text-anchor="middle">单个控制位 d(k) 的上升沿采样时序</text>
+
+  <g>
+    <line class="grid" x1="260" y1="82" x2="260" y2="395"/>
+    <line class="grid" x1="610" y1="82" x2="610" y2="395"/>
+    <line class="grid" x1="960" y1="82" x2="960" y2="395"/>
+    <text class="small" x="260" y="75" text-anchor="middle">样点 2k</text>
+    <text class="small" x="610" y="75" text-anchor="middle">样点 2k+1</text>
+    <text class="small" x="960" y="75" text-anchor="middle">样点 2k+2</text>
+    <text class="small" x="260" y="420" text-anchor="middle">t = k ms − 0.5 ms</text>
+    <text class="small" x="610" y="420" text-anchor="middle">t = k ms</text>
+    <text class="small" x="960" y="420" text-anchor="middle">t = k ms + 0.5 ms</text>
+  </g>
+
+  <text class="label" x="185" y="157" text-anchor="end">Din</text>
+  <rect class="data" x="260" y="120" width="700" height="64" rx="7"/>
+  <text class="label" x="610" y="158" text-anchor="middle">d(k) 保持稳定，共1 ms</text>
+  <text class="small" x="1040" y="158">切换到 d(k+1)</text>
+
+  <text class="label" x="185" y="287" text-anchor="end">CLK_SHReg</text>
+  <path class="clk" d="M180 320 L610 320 L610 245 L960 245 L960 320 L1120 320"/>
+  <line class="edge" x1="610" y1="92" x2="610" y2="370"/>
+  <text class="edge-text" x="625" y="226">芯片在此上升沿移入 d(k)</text>
+
+  <line class="measure" x1="270" y1="365" x2="600" y2="365"/>
+  <text class="small" x="435" y="354" text-anchor="middle">建立时间 = 0.5 ms</text>
+  <line class="measure" x1="620" y1="365" x2="950" y2="365"/>
+  <text class="small" x="785" y="354" text-anchor="middle">保持时间 = 0.5 ms</text>
+
+  <rect class="note" x="190" y="450" width="920" height="80" rx="8"/>
+  <text class="label" x="220" y="481">第474位特例：</text>
+  <text class="small" x="390" y="481">d474 = BYPASS，占样点948和949；修正后CLK在样点949产生第474个上升沿。</text>
+  <text class="small" x="220" y="511">对应真实时间：数据在473.5 ms建立，474.0 ms上升沿采样，474.5 ms结束保持。</text>
+</svg>

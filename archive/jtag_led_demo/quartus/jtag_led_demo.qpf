@@ -1,0 +1,3 @@
+QUARTUS_VERSION = "25.1std"
+DATE = "19:55:00  JULY 27, 2026"
+PROJECT_REVISION = "jtag_led_demo"

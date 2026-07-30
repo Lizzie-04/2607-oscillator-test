@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local configuration and logs
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+*.swp
+*.lnk
+
+# Codex/tool support and one-off render output
+.codex_work/
+outputs/
+tmp/
+_staging/
+
+# Quartus/Questa generated databases
+**/db/
+**/incremental_db/
+**/work/
+**/transcript
+**/vsim.wlf
+**/*.qws
+**/*.rpt
+**/*.chg
+**/*.cmp
+**/*.eqn
+**/*.map
+**/*.pin
+**/*.smsg
+**/*.summary~
+
+# Keep only the reviewed V1 programming image.
+*.sof
+!FPGA_V1/quartus/output_files/fpga_v1.sof
+
+# Large third-party installation/media archives are reproducible downloads.
+*.zip
+
+# Operating-system/editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
