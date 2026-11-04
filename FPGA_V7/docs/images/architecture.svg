@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#334155"/>
+    </marker>
+    <style>
+      .title{font:700 28px "Microsoft YaHei",sans-serif;fill:#0f172a}
+      .sub{font:500 15px "Microsoft YaHei",sans-serif;fill:#475569}
+      .box{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}
+      .pc{fill:#eff6ff;stroke:#2563eb}
+      .core{fill:#f0fdf4;stroke:#16a34a}
+      .chip{fill:#fff7ed;stroke:#ea580c}
+      .preserve{fill:#faf5ff;stroke:#9333ea}
+      .label{font:600 17px "Microsoft YaHei",sans-serif;fill:#0f172a;text-anchor:middle}
+      .small{font:14px "Microsoft YaHei",sans-serif;fill:#334155;text-anchor:middle}
+      .edge{stroke:#334155;stroke-width:2.2;fill:none;marker-end:url(#arrow)}
+      .dash{stroke-dasharray:7 5}
+      .domain{fill:none;stroke:#94a3b8;stroke-width:1.5;stroke-dasharray:8 6;rx:18}
+    </style>
+  </defs>
+  <rect width="1200" height="650" fill="#ffffff"/>
+  <text class="title" x="50" y="48">FPGA V4 系统结构</text>
+  <text class="sub" x="50" y="76">GPIO1 / JTAG 面向电脑，GPIO2 面向 Rev G PCB；采样与控制使用独立时钟域并通过握手跨域。</text>
+
+  <rect class="domain" x="32" y="100" width="292" height="510"/>
+  <text class="sub" x="50" y="128">电脑端</text>
+  <rect class="box pc" x="70" y="160" width="215" height="100"/>
+  <text class="label" x="177" y="198">Python GUI</text>
+  <text class="small" x="177" y="225">控制字 / 连续采样 / 合并校准看板</text>
+  <rect class="box pc" x="70" y="330" width="215" height="110"/>
+  <text class="label" x="177" y="368">通信后端</text>
+  <text class="small" x="177" y="396">JTAG ISSP（本地 UI）</text>
+  <text class="small" x="177" y="419">或 GPIO1 并行握手</text>
+  <path class="edge" d="M177 260V430"/>
+
+  <rect class="domain" x="350" y="100" width="550" height="510"/>
+  <text class="sub" x="370" y="128">Cyclone V FPGA</text>
+  <rect class="box core" x="390" y="155" width="205" height="95"/>
+  <text class="label" x="492" y="190">命令仲裁与校验</text>
+  <text class="small" x="492" y="217">toggle/ack · opcode · error</text>
+  <rect class="box core" x="650" y="155" width="205" height="95"/>
+  <text class="label" x="752" y="190">30 × 16 bit 影子区</text>
+  <text class="small" x="752" y="217">完整后原子提交 474 bit</text>
+  <path class="edge" d="M595 202H650"/>
+
+  <rect class="box core" x="390" y="300" width="205" height="110"/>
+  <text class="label" x="492" y="338">芯片启动驱动器</text>
+  <text class="small" x="492" y="365">474 个上升沿</text>
+  <text class="small" x="492" y="388">0.5 ms / 半周期</text>
+  <path class="edge" d="M752 250V275H492V400"/>
+
+  <rect class="box core" x="650" y="300" width="205" height="110"/>
+  <text class="label" x="752" y="337">连续三角窗降采样</text>
+  <text class="small" x="752" y="364">BS_T / BS_C · L=2048…100000（N=1024…50000）</text>
+  <text class="small" x="752" y="387">μ1 / μ2 Q16 + 100点双时钟RAM</text>
+
+  <rect class="box preserve" x="390" y="465" width="465" height="105"/>
+  <text class="label" x="622" y="500">on_chip DigOsc 校准链（原始DSM可选）</text>
+  <text class="small" x="622" y="528">filter_down → divider → polynomial → adder + SAR → filter_up → DSM</text>
+  <text class="small" x="622" y="551">SAR：-0.5～+0.5；有界DSM端点保护；看板值不裁剪</text>
+
+  <rect class="domain" x="930" y="100" width="238" height="510"/>
+  <text class="sub" x="950" y="128">Rev G PCB / 模拟芯片</text>
+  <rect class="box chip" x="960" y="210" width="178" height="165"/>
+  <text class="label" x="1049" y="248">GPIO2</text>
+  <text class="small" x="1049" y="280">SR / EN / START / RESET</text>
+  <text class="small" x="1049" y="310">FS_DATA_OUT33</text>
+  <text class="small" x="1049" y="336">BS_T_OUT33 / BS_C_OUT33</text>
+  <rect class="box chip" x="960" y="450" width="178" height="88"/>
+  <text class="label" x="1049" y="484">校准输出</text>
+  <text class="small" x="1049" y="512">CLK_3P3 / DSM_3P3</text>
+
+  <path class="edge" d="M285 385H390"/>
+  <path class="edge" d="M595 355H960"/>
+  <path class="edge" d="M960 315H855"/>
+  <path class="edge" d="M960 340H875V455H855"/>
+  <path class="edge dash" d="M650 355H620V465"/>
+  <path class="edge" d="M855 517H960"/>
+  <path class="edge" d="M650 355H625V430H330V405H285"/>
+  <text class="small" x="507" y="445">μ与四路校准CDC mailbox / 统计RAM批量下载</text>
+</svg>

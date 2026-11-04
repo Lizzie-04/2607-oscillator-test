@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "project": "FPGA_V11",
+  "pcb_control": {
+    "bypass": 1,
+    "cs": 2,
+    "en_bias": 1,
+    "en_dllbuf": 0,
+    "en_intbuf": 0,
+    "en_sensor": 1,
+    "en_xo": 1,
+    "en_xobufa": 0,
+    "su": 1,
+    "trim_c_coarse": 2,
+    "trim_c_fine": 7,
+    "trim_r_xo": 6,
+    "polarity": 1
+  },
+  "fpga_algorithm_coefficients": {
+    "alpha": 35160,
+    "batch": [
+      64898069,
+      -742123299,
+      3537010640,
+      -8984725822,
+      12817912680,
+      -9727507875,
+      3064746466
+    ],
+    "poly": [
+      251816,
+      -1428260,
+      3851636,
+      -5670353,
+      4304526,
+      -1318595,
+      0,
+      0
+    ]
+  },
+  "n_daq": 20000
+}

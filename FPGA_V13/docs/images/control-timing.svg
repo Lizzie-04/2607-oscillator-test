@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <defs>
+    <style>
+      .title{font:700 28px "Microsoft YaHei",sans-serif;fill:#0f172a}
+      .sub{font:15px "Microsoft YaHei",sans-serif;fill:#475569}
+      .label{font:600 16px "Microsoft YaHei",sans-serif;fill:#0f172a}
+      .small{font:14px "Microsoft YaHei",sans-serif;fill:#334155}
+      .axis{stroke:#94a3b8;stroke-width:1.5}
+      .wave{stroke:#2563eb;stroke-width:3;fill:none;stroke-linejoin:round}
+      .data{stroke:#16a34a;stroke-width:3;fill:none}
+      .event{stroke:#ea580c;stroke-width:2;stroke-dasharray:6 5}
+      .note{fill:#fff7ed;stroke:#fb923c;stroke-width:1.5;rx:8}
+      .pass{fill:#f0fdf4;stroke:#22c55e;stroke-width:1.5;rx:10}
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="#ffffff"/>
+  <text class="title" x="45" y="45">474 位控制字驱动时序</text>
+  <text class="sub" x="45" y="73">系统时钟 50 MHz；每个样点 0.5 ms = 25,000 个时钟；SR_CLK 的每个上升沿锁存一个 d。</text>
+
+  <line class="axis" x1="175" y1="540" x2="1140" y2="540"/>
+  <g class="small" text-anchor="middle">
+    <text x="200" y="570">0 ms</text>
+    <text x="260" y="570">0.5</text>
+    <text x="330" y="570">1.0</text>
+    <text x="400" y="570">1.5</text>
+    <text x="925" y="570">474.0</text>
+    <text x="995" y="570">475.0</text>
+    <text x="1100" y="570">750.0</text>
+  </g>
+
+  <text class="label" x="35" y="145">SR_IN</text>
+  <path class="data" d="M175 160H235V130H305V160H375V130H445V160H860V130H930V160H1140"/>
+  <g class="small" text-anchor="middle">
+    <text x="270" y="108">d1</text>
+    <text x="340" y="185">d2</text>
+    <text x="410" y="108">d3</text>
+    <text x="895" y="108">d474 = BYPASS</text>
+  </g>
+
+  <text class="label" x="35" y="255">SR_CLK</text>
+  <path class="wave" d="M175 270H245V230H315V270H385V230H455V270H830V230H900V270H930V230H960V270H1140"/>
+  <g class="small" text-anchor="middle">
+    <text x="280" y="217">↑1</text>
+    <text x="420" y="217">↑2</text>
+    <text x="855" y="217">↑473</text>
+    <text x="945" y="217">↑474</text>
+  </g>
+
+  <text class="label" x="35" y="350">SR_ENx</text>
+  <path class="wave" d="M175 365H980V325H1008V365H1140"/>
+  <text class="small" x="983" y="312">目标芯片使能脉冲</text>
+
+  <text class="label" x="35" y="440">RESET / START</text>
+  <path class="wave" d="M175 455H1020V415H1045V455H1065V415H1090V455H1140"/>
+  <text class="small" x="1018" y="402">RESET</text>
+  <text class="small" x="1135" y="402" text-anchor="end">START_DLL / START_ANA</text>
+
+  <line class="event" x1="930" y1="90" x2="930" y2="535"/>
+  <line class="event" x1="995" y1="90" x2="995" y2="535"/>
+  <line class="event" x1="1100" y1="90" x2="1100" y2="535"/>
+  <rect class="note" x="735" y="470" width="248" height="55"/>
+  <text class="small" x="750" y="492">第 474 个上升沿移入 BYPASS；</text>
+  <text class="small" x="750" y="513">修复了原脚本少一个打拍的风险。</text>
+  <rect class="pass" x="395" y="470" width="300" height="55"/>
+  <text class="small" x="412" y="492">Testbench：上升沿=474，位序逐位匹配，</text>
+  <text class="small" x="412" y="513">使能/复位/总时长断言全部 PASS。</text>
+</svg>

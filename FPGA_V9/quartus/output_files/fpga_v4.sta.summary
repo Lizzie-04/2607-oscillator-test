@@ -1,0 +1,293 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
+Slack : 7.842
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.049
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'CORE_CLK_2MHZ'
+Slack : 431.643
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'FS_SAMPLE_CLK'
+Slack : 1782.149
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CORE_CLK_2MHZ'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'FS_SAMPLE_CLK'
+Slack : 0.229
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.262
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 29.934
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CORE_CLK_2MHZ'
+Slack : 494.086
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'FS_SAMPLE_CLK'
+Slack : 1993.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'CORE_CLK_2MHZ'
+Slack : 0.556
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.946
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'FS_SAMPLE_CLK'
+Slack : 1.306
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.865
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.836
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CORE_CLK_2MHZ'
+Slack : 248.967
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FS_SAMPLE_CLK'
+Slack : 998.981
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
+Slack : 7.880
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.118
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CORE_CLK_2MHZ'
+Slack : 429.596
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'FS_SAMPLE_CLK'
+Slack : 1779.136
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CORE_CLK_2MHZ'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'FS_SAMPLE_CLK'
+Slack : 0.217
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.253
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.277
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.043
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'CORE_CLK_2MHZ'
+Slack : 494.338
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'FS_SAMPLE_CLK'
+Slack : 1994.021
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'CORE_CLK_2MHZ'
+Slack : 0.505
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.872
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'FS_SAMPLE_CLK'
+Slack : 1.231
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.857
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.841
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CORE_CLK_2MHZ'
+Slack : 248.974
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FS_SAMPLE_CLK'
+Slack : 999.004
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
+Slack : 12.630
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 14.039
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CORE_CLK_2MHZ'
+Slack : 462.843
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'FS_SAMPLE_CLK'
+Slack : 1872.465
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.126
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'FS_SAMPLE_CLK'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CORE_CLK_2MHZ'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 31.206
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CORE_CLK_2MHZ'
+Slack : 495.825
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'FS_SAMPLE_CLK'
+Slack : 1995.552
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'CORE_CLK_2MHZ'
+Slack : 0.296
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'FS_SAMPLE_CLK'
+Slack : 0.758
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.511
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.804
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CORE_CLK_2MHZ'
+Slack : 248.852
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FS_SAMPLE_CLK'
+Slack : 998.875
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
+Slack : 13.204
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 14.320
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CORE_CLK_2MHZ'
+Slack : 465.017
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'FS_SAMPLE_CLK'
+Slack : 1881.439
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CORE_CLK_2MHZ'
+Slack : 0.069
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.114
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'FS_SAMPLE_CLK'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
+Slack : 0.164
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 31.389
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CORE_CLK_2MHZ'
+Slack : 496.314
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'FS_SAMPLE_CLK'
+Slack : 1996.098
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'CORE_CLK_2MHZ'
+Slack : 0.267
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'FS_SAMPLE_CLK'
+Slack : 0.682
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : 8.463
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.823
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CORE_CLK_2MHZ'
+Slack : 248.859
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FS_SAMPLE_CLK'
+Slack : 998.845
+TNS   : 0.000
+
+------------------------------------------------------------

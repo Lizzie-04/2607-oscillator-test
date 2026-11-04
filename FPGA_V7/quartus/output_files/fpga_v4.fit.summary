@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sat Aug  1 16:24:37 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : fpga_v4
+Top-level Entity Name : fpga_v2_top
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 5,965 / 32,070 ( 19 % )
+Total registers : 6657
+Total pins : 67 / 457 ( 15 % )
+Total virtual pins : 0
+Total block memory bits : 4,653 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 2 / 397 ( < 1 % )
+Total DSP Blocks : 16 / 87 ( 18 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "project": "FPGA_V13",
+  "pcb_control": {
+    "bypass": 1,
+    "cs": 2,
+    "en_bias": 1,
+    "en_dllbuf": 0,
+    "en_intbuf": 0,
+    "en_sensor": 1,
+    "en_xo": 1,
+    "en_xobufa": 0,
+    "su": 1,
+    "trim_c_coarse": 3,
+    "trim_c_fine": 4,
+    "trim_r_xo": 6,
+    "polarity": 0
+  },
+  "fpga_algorithm_coefficients": {
+    "alpha": 35389,
+    "batch": [
+      -1075319,
+      10099188,
+      -39875945,
+      84357810,
+      -93703692,
+      42680938,
+      0
+    ],
+    "poly": [
+      0,
+      65536,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "n_daq": 20000
+}

@@ -37,9 +37,15 @@ _staging/
 **/*.smsg
 **/*.summary~
 
-# Keep only the reviewed V1 programming image.
+# Keep the reviewed standalone programming images.
 *.sof
 !FPGA_V1/quartus/output_files/fpga_v1.sof
+!FPGA_V2/quartus/output_files/fpga_v2.sof
+!FPGA_V4/quartus/output_files/fpga_v4.sof
+
+# GUI measurement output is local experiment data.
+FPGA_V2/data/statistics/
+FPGA_V4/data/statistics/
 
 # Large third-party installation/media archives are reproducible downloads.
 *.zip
@@ -48,3 +54,12 @@ _staging/
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# Final source archive: retain existing per-version programming images.
+!FPGA_V*/quartus/output_files/*.sof
+
+# Runtime measurements and local dependency/render caches stay on the lab PC.
+FPGA_V*/data/
+.pydeps/
+Allan_Deviation/*
+!Allan_Deviation/run_allan_deviation.py

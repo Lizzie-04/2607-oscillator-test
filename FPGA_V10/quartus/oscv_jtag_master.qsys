@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component name="$${FILENAME}" displayName="$${FILENAME}" version="1.0" description="FPGA V8 JTAG-to-Avalon master" tags="" categories="System" />
+ <parameter name="baseDevice" value="Cyclone V" />
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="5CSEMA5F31C6" />
+ <parameter name="deviceFamily" value="Cyclone V" />
+ <parameter name="deviceSpeedGrade" value="6" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <interface name="clk" internal="master_0.clk" type="clock" dir="end" />
+ <interface name="reset" internal="master_0.clk_reset" type="reset" dir="end" />
+ <interface name="jtag_avalon" internal="master_0.master" type="avalon" dir="start" />
+ <interface name="jtag_avalon_reset" internal="master_0.master_reset" type="reset" dir="start" />
+ <module name="master_0" kind="altera_jtag_avalon_master" version="25.1" enabled="1">
+  <parameter name="AUTO_BASE_DEVICE" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <parameter name="COMPONENT_CLOCK" value="50000000" />
+  <parameter name="FAST_VER" value="0" />
+  <parameter name="FIFO_DEPTHS" value="2" />
+  <parameter name="PLI_PORT" value="50000" />
+  <parameter name="USE_PLI" value="0" />
+ </module>
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>
